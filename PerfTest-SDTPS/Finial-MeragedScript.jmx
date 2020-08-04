@@ -60,12 +60,12 @@
           </elementProp>
           <elementProp name="p_NoOfUsers" elementType="Argument">
             <stringProp name="Argument.name">p_NoOfUsers</stringProp>
-            <stringProp name="Argument.value">${__P(Users,1)}</stringProp>
+            <stringProp name="Argument.value">${__P(NoOfUsers,1)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="p_RampUp" elementType="Argument">
             <stringProp name="Argument.name">p_RampUp</stringProp>
-            <stringProp name="Argument.value">${__P(RampUp,1)}</stringProp>
+            <stringProp name="Argument.value">${__P(RampUpPeriod,1)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="p_Duration" elementType="Argument">
@@ -189,8 +189,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">100</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">300</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${p_NoOfUsers}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${p_RampUp}</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration">${p_Duration}</stringProp>
         <stringProp name="ThreadGroup.delay">0</stringProp>
