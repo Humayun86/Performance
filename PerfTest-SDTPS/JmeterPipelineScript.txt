@@ -1,4 +1,4 @@
 node {
   stage 'Run JMeter Test'
-  sh 'C:/apache-jmeter-5.0/bin/jmeter.sh -n -t C:/apache-jmeter-5.0/extras/Finial-MeragedScript.jmx -JNoOfUsers=1 -JRampUpPeriod=1 -l resultsPipeline/jtlPipeline/resultsMPortal01.jtl'
+  sh '/home/apache-jmeter-5.0/bin/jmeter.sh -n -t /home/apache-jmeter-5.0/extras/Finial-MeragedScript.jmx -JNoOfUsers=1 -JRampUpPeriod=1 -l resultsPipeline/jtlPipeline/resultsMPortal01.jtl'
 }
